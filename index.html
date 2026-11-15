@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MediCare – Pharmacy Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login" class="login">
+  <form id="lf" class="lcard">
+    <div class="logo">+</div>
+    <h1>MediCare Pharmacy</h1>
+    <p>Log in to manage stock, billing and suppliers.</p>
+    <input id="u" type="email" placeholder="Email" autocomplete="email" required>
+    <input id="p" type="password" placeholder="Password" autocomplete="current-password" required>
+    <button class="btn">Log in</button>
+    <a href="#" id="reg">New staff member? Register with the details above</a>
+    <small>Password must be at least 6 characters.</small>
+  </form>
+</div>
+
+<div id="app" class="hide">
+  <aside id="nav">
+    <div class="brand"><span class="logo sm">+</span> MediCare</div>
+    <button data-v="dash">Dashboard</button>
+    <button data-v="meds">Medicines</button>
+    <button data-v="bill">Billing</button>
+    <button data-v="sales">Sales history</button>
+    <button data-v="sup">Suppliers</button>
+    <button data-v="rx">Prescriptions</button>
+    <button data-v="rep">Reports</button>
+    <button id="out" class="logout">Log out</button>
+  </aside>
+  <main>
+    <header>
+      <button id="burger" aria-label="Menu">☰</button>
+      <h2 id="title"></h2>
+      <div class="hr">
+        <button id="bell" class="bell" aria-label="Notifications">🔔<span id="cnt">0</span></button>
+        <span id="who"></span>
+      </div>
+    </header>
+    <section id="view"></section>
+  </main>
+</div>
+
+<div id="modal" class="hide"></div>
+<script type="module" src="script.js"></script>
+</body>
+</html>
